@@ -16,11 +16,11 @@ Provides the following methods on bitmap objects:
 ## Example
 
 ```Go
-	map := bitmap.New(127)
+	m := bitmap.New(127)
 
-	map.Set(42, true)
+	m.Set(42, true)
 
-	if map.Get(42) {
+	if m.Get(42) {
 		// OK
 	}
 ```
