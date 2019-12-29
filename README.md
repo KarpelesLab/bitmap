@@ -31,5 +31,5 @@ There are already a few bitmap implementations in Go available out there, howeve
 
 * [boljen's go-bitmap](https://godoc.org/github.com/boljen/go-bitmap) has separate implementations for Bitmap/Concurrent/Threadsafe, which feels a bit un-needed, and looks generally okay except for lack of support for big endian.
 * [ShawnMilo's bitmap](https://www.godoc.org/github.com/ShawnMilo/bitmap) has a nice feel but lacks atomic methods and adds string methods using json/gzip/base64 which feels a bit overkill
-* [Roaring Bitmaps](https://godoc.org/github.com/RoaringBitmap/roaring) are simply too complex for what I need bitmaps for. You should however definitely use that if your bitmap size is over 1,000,000 bits or so.
+* [Roaring Bitmaps](https://godoc.org/github.com/RoaringBitmap/roaring) are simply too complex for what I need bitmaps for. You should however definitely use that if you store more than 200k bits or so.
 
