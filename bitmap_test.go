@@ -3,12 +3,15 @@ package bitmap
 import "testing"
 
 func TestBM(t *testing.T) {
-	bm := New(512)
+	bm := New(511)
 
 	// all should be unset
-	for i := 0; i < 512; i++ {
+	for i := 0; i < 511; i++ {
 		if bm.Get(i) {
 			t.Errorf("bit %d is set while it shouldn't (initial)", i)
+		}
+		if bm.GetAtomic(i) {
+			t.Errorf("bit %d is set while it shouldn't (initial, atomic)", i)
 		}
 	}
 
