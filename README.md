@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/KarpelesLab/bitmap.svg)](https://travis-ci.org/KarpelesLab/bitmap)
 [![GoDoc](https://godoc.org/github.com/KarpelesLab/bitmap?status.svg)](https://godoc.org/github.com/KarpelesLab/bitmap)
+[![Coverage Status](https://coveralls.io/repos/github/KarpelesLab/bitmap/badge.svg?branch=master)](https://coveralls.io/github/KarpelesLab/bitmap?branch=master)
 
 # Bitmap
 
