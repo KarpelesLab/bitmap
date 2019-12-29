@@ -38,7 +38,15 @@ func TestBM(t *testing.T) {
 			t.Errorf("bit %d isn't set while it should (atomic)", i)
 		}
 
-		bm.SetAtomic(i, false)
+		switch i % 3 {
+		case 0:
+			bm.SetAtomic(i, false)
+		case 1:
+			bm.Set(i, false)
+		case 2:
+			bm.Toggle(i)
+		}
+
 		if bm.Get(i) {
 			t.Errorf("bit %d is set while it shouldn't", i)
 		}
@@ -56,7 +64,11 @@ func TestBM(t *testing.T) {
 			lk.RLock()
 			defer lk.RUnlock()
 
-			bm.SetAtomic(j, true)
+			if j%2 == 0 {
+				bm.SetAtomic(j, true)
+			} else {
+				bm.ToggleAtomic(j)
+			}
 			wg.Done()
 		}(i)
 	}
