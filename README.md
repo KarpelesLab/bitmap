@@ -8,8 +8,10 @@ Provides the following methods on bitmap objects:
 
 * Get(bit int)
 * Set(bit int, value bool)
+* Toggle(bit)
 * GetAtomic(bit int)
 * SetAtomic(bit int, value bool)
+* ToggleAtomic(bit int)
 
 ## Example
 
