@@ -7,3 +7,6 @@ go:
   - "1.12"
   - "1.x"
   - master
+arch:
+  - amd64
+  - arm64
