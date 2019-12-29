@@ -1,0 +1,9 @@
+language: go
+script:
+  - go get -v -t .
+  - go build
+  - go test
+go:
+  - "1.12"
+  - "1.x"
+  - master
